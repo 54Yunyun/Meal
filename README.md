@@ -1,6 +1,6 @@
 # 作品說明
 
-- 食譜網站
+- 食譜網站：Vue3 + Tailwind
 - Home：首頁為顯示隨機的食譜
 - Search Meals：依照「食物名稱」搜尋
 - Meals by Letter：依照「字母」搜尋
