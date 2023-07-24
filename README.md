@@ -8,8 +8,8 @@
 - 作品連結：https://taiwan-walk.vercel.app/
   
 # 參考來源
-[YouTube](https://www.youtube.com/watch?v=cfiN8lCA3RM&list=LL&index=6&t=14s&ab_channel=TheCodeholic)
-[API](https://www.themealdb.com/api.php)
+- [YouTube](https://www.youtube.com/watch?v=cfiN8lCA3RM&list=LL&index=6&t=14s&ab_channel=TheCodeholic)
+- [API](https://www.themealdb.com/api.php)
 
 # 系統說明
 
