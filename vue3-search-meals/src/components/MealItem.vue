@@ -1,4 +1,5 @@
 <script setup>
+import YouTubeButton from './YouTubeButton.vue';
 const { meal } = defineProps({
   meal: {
     required: true,
@@ -7,7 +8,7 @@ const { meal } = defineProps({
 });
 </script>
 <template>
-  <div class="bg-white shadow rounded-xl">
+  <div class="bg-white shadow rounded-xl hover:scale-105 transition-all">
     <router-link :to="{ name: 'mealDetails', params: { id: meal.idMeal } }">
       <img
         :src="meal.strMealThumb"
@@ -19,12 +20,6 @@ const { meal } = defineProps({
       <h3 class="font-bold">{{ meal.strMeal }}</h3>
       <div class="flex items-center justify-between">
         <YouTubeButton :href="meal.strYoutube" />
-        <router-link
-          to="/"
-          class="px-3 py-2 rounded border-2 text-white border-purple-600 bg-purple-500 hover:bg-purple-600 transition-colors"
-        >
-          View
-        </router-link>
       </div>
     </div>
   </div>

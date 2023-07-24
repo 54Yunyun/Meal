@@ -1,16 +1,19 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue';
-import { api } from '../api';
 import { useRoute } from 'vue-router';
 import { store } from '../store';
-import MealItem from '../components/MealItem.vue';
-import YouTubeButton from '../components/YouTubeButton.vue';
+import Meals from '../components/Meals.vue';
+
 const route = useRoute();
 const keyword = ref('');
 const meals = computed(() => store.state.searchedMeals);
-console.log(meals);
 function searchMeals() {
-  store.dispatch('searchMeals', keyword.value);
+  if (keyword.value) {
+    store.dispatch('searchMeals', keyword.value);
+  }else {
+    store.commit ('setSearchedMeals', [])
+  }
+
 }
 
 onMounted(() => {
@@ -22,15 +25,16 @@ onMounted(() => {
 </script>
 <template>
   <div class="p-8 pb-0">
+    <h1 class="text-4xl font-bold mb-4 text-orange-500">Search Meals by Name</h1>
+  </div>
+  <div class="px-8 pb-3">
     <input
-      v-model="keyword"
       type="text"
-      class="rounded border-2 border-gray-200 w-full"
-      placeholder="Search Fo Meals"
+      v-model="keyword"
+      class="rounded border-2 bg-white border-gray-200 focus:ring-orange-500 focus:border-orange-500 w-full"
+      placeholder="Search for Meals"
       @change="searchMeals"
     />
   </div>
-  <div class="grid grid-cols-1 md:grid-col-3 gap-5 p-8">
-   <MealItem v-for="meal of meals" :key="meal.idMeal" :meal="meal" />
-  </div>
+  <Meals :meals="meals" />
 </template>
