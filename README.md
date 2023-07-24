@@ -1,7 +1,23 @@
-# Vue 3 + Vite
+# 作品說明
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+- 食譜網站：Vue3 + Tailwind
+- Home：首頁為顯示隨機的食譜
+- Search Meals：依照「食物名稱」搜尋
+- Meals by Letter：依照「字母」搜尋
+- Meals by Ingredients：依照「食物成份」搜尋
+- 作品連結：https://taiwan-walk.vercel.app/
+  
+# 參考來源
+- [YouTube](https://www.youtube.com/watch?v=cfiN8lCA3RM&list=LL&index=6&t=14s&ab_channel=TheCodeholic)
+- [API](https://www.themealdb.com/api.php)
 
-## Recommended IDE Setup
+# 系統說明
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Project setup
+npm install
+
+### Compiles and hot-reloads for development
+npm run dev
+
+### Compiles and minifies for production
+npm run build
